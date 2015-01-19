@@ -13,6 +13,10 @@
   padding-right: 5%;
 }
 
+.url {
+    color: #708090;
+}
+
 h1 {
   font-size: 40px;
   color: #F5A623;

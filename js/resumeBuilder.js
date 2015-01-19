@@ -125,9 +125,6 @@ education.display = function(){
                 $(".education-entry:last").append(formattedSchoolName);
             }       
             
-        
-    
-
         var formattedSchoolYear = HTMLschoolDates.replace("%data%", education.schools[school].year);
 
         var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
@@ -155,8 +152,7 @@ education.display = function(){
         formattedOnlineSchoolUrl = formattedOnlineSchoolUrl.replace("%url%",education.onlineCourses[course].url);
         $(".education-entry:last").append(formattedOnlineSchoolYear, formattedOnlineSchoolUrl);        
     }
-
 };
 
-// call for display of education
+// display education
 education.display();
