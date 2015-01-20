@@ -225,4 +225,8 @@ function inName(){
     return name[0] + " " + name[1];
 }
 
+// add a button for making the name internationalized
 $("#main").append(internationalizeButton);
+
+// add and display a google map
+$("#mapDiv").append(googleMap);
