@@ -223,3 +223,14 @@ $(document).click(function(loc) {
 
 });
 
+// add a button for making the name in an internationalized format
+function inName(){
+    var name = $("#name").html();
+    name = name.trim().split(" ");
+    name[1] = name[1].toUpperCase();
+    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1);
+
+    return name[0] + " " + name[1];
+}
+
+$("#main").append(internationalizeButton);
