@@ -215,14 +215,6 @@ function displayWork(){
 // display working experience in HTML
 displayWork();
 
-//collect x, y valuse when clicking on the website
-$(document).click(function(loc) { 
-    var x = loc.pageX;
-    var y = loc.pageY;
-    logClicks(x,y);
-
-});
-
 // add a button for making the name in an internationalized format
 function inName(){
     var name = $("#name").html();
