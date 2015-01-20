@@ -108,7 +108,7 @@ var education = {
     ]
 }
 
-// define a display function for education
+// define a display method for the object "education"
 education.display = function(){
     
     // add information about schools
@@ -189,7 +189,7 @@ var work = {
 }
 
 
-// define a display function for ojbect "work"
+// define a display method for the ojbect "work"
 function displayWork(){
     for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
@@ -214,3 +214,12 @@ function displayWork(){
 
 // display working experience in HTML
 displayWork();
+
+//collect x, y valuse when clicking on the website
+$(document).click(function(loc) { 
+    var x = loc.pageX;
+    var y = loc.pageY;
+    logClicks(x,y);
+
+});
+
