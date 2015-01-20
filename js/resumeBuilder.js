@@ -53,7 +53,7 @@ bio.display = function(){
 // call for display function in bio
 bio.display();
 
-// crate an ojbect education in JSON format
+// create an object "education" containing visite schools and courses in JSON format
 var education = {
     "schools": [
         {
@@ -108,10 +108,10 @@ var education = {
     ]
 }
 
-// defina a display function for education
+// define a display function for education
 education.display = function(){
     
-    // adds information about schools
+    // add information about schools
     $("#education").append(HTMLschoolStart); 
     for (school in education.schools){    
            
@@ -131,7 +131,6 @@ education.display = function(){
         var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
 
         $(".education-entry:last").append(formattedSchoolYear, formattedSchoolLocation, formattedSchoolMajor);
-
     };
 
     
@@ -140,11 +139,9 @@ education.display = function(){
     
     for (course in education.onlineCourses){
         var formattedOnlineSchoolTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].name);
-
-        //$(".education-entry:last").append(formattedOnlineSchoolTitle)
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 
-        // adds name of the online course and name of the school formatted to class education-entry
+        // add a formatted name of the online course and name of the online school to HTML class "education-entry"
         $(".education-entry:last").append(formattedOnlineSchoolTitle + formattedOnlineSchool);
 
         var formattedOnlineSchoolYear = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
@@ -156,3 +153,64 @@ education.display = function(){
 
 // display education
 education.display();
+
+// create an object work in JSON 
+var work = {
+    "jobs": [
+    {
+        "position" : "Content Assistant",
+        "company" : "MLiven s.r.o.",
+        "years" : "9/2007 - 2/2008",
+        "city" : "Prague, Czech Republic",
+        "description" : "Webmastering, responsibility for providing technical support of dating website, answering users' questions and performing content control. Preparation of graphic sources for mobile phone applications. Text correction, updating databases."
+    },
+    {
+        "position" : "Night Auditor",
+        "company" : "Andel's Hotel Prague",
+        "years" : "7/2012 - 8/2013",
+        "city" : "Prague, Czech Republic",
+        "description" : "Ensuring the accuracy of the charges to the guest folios. Giving daily management reports regarding occupancy reports, calculation of daily revenues. Providing client service and performing typical front desk functions such as check-in, check-out, reservations, responding to the guest complaints, etc."
+    },
+    {
+        "position" : "Real Estate Agent",
+        "company" : "RedHippo Real Estate s.r.o.",
+        "years" : "6/2010 - 5/2011",
+        "city" : "Prague, Czech Republic",
+        "description" : "Arranging the selling or renting properties, providing full-service mediation, ensuring marketing and legal service. In addition to the cooperation with premanent clients, I was involved in active searching for and addressing potential clients."
+    },
+    {
+        "position" : "Waitress",
+        "company" : "La Cuve à bière",
+        "years" : "4/2014 - 12/2014",
+        "city" : "Soignies, Belgium",
+        "description" : "Responsibility for the cash register. Taking customers’ orders. Preparing and serving drinks"
+    }
+            ]
+}
+
+
+// define a display function for ojbect "work"
+function displayWork(){
+    for (job in work.jobs) {
+    $("#workExperience").append(HTMLworkStart);
+
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].position);
+    var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].company);
+    
+    var formattedEmployerTitle = formattedEmployer + formattedWorkTitle;
+
+    //The "last"is jQuery element which return last(newly added) position
+    $(".work-entry:last").append(formattedEmployerTitle);
+
+    // add a formatted date
+    var formattedWorkDate = HTMLworkDates.replace("%data%", work.jobs[job].years);
+    $(".work-entry:last").append(formattedWorkDate);
+
+    // add a formatted description
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+    $(".work-entry:last").append(formattedDescription);
+    }
+}
+
+// display working experience in HTML
+displayWork();
