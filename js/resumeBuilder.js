@@ -1,4 +1,17 @@
 
+var el      =  $('site')[0];
+console.log(el);
+// var src     =  $(el).css('background-image').slice(4, -1);
+// var img     =  new Image();
+
+// checkHeight =  function(){    
+//     if(img.height < window.innerHeight){
+//        repeatBg();     
+//     }
+// }
+// img.onload  =  checkHeight();
+// img.src = src;
+
 // create an object, bio, with basic infomations and skills in JSON format
 var bio = {
 	"name" : "Andrea Furikova",
@@ -9,9 +22,9 @@ var bio = {
 		"github" : "afurikova", 
 		"location" : "Soignies (Belgium)"
 		},
-	"age" : 29,	
+	"age" : 30,	
 	"computerSkills" : ["HTML", " CSS", "Python","JavaScript","jQuery","Git","Windows", "Active Directory","Adobe Photoshop","Adobe InDesign","Adobe Illustrator","Amadeus","Analytic and Logical Thinking","Customer Service", "Communication","Czech", " Slovak", "English","French","Krav Maga","Cooking"],
-    "bioPic" : "images/ja.jpg",
+    "bioPic" : "images/pic1.jpg",
 	"welcomeMsg" : "<cite>Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree.</cite> Martin Luther. " 
 }
 
