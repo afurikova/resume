@@ -34,7 +34,12 @@ body {
 }
 
 .url {
-    color: #708090;
+    font-style: italic;
+    font-size: 14px;
+    color: #999999;
+    line-height: 16px;
+    float: right;
+    margin-top: 0;
 }
 
 h1 {

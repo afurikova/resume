@@ -187,14 +187,12 @@ education.display = function(){
     for (course in education.onlineCourses){
         var formattedOnlineSchoolTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].name);
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-
-        // add a formatted name of the online course and name of the online school to HTML class "education-entry"
-        $(".education-entry:last").append(formattedOnlineSchoolTitle + formattedOnlineSchool);
-
         var formattedOnlineSchoolYear = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
         var formattedOnlineSchoolUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-        formattedOnlineSchoolUrl = formattedOnlineSchoolUrl.replace("%url%",education.onlineCourses[course].url);
-        $(".education-entry:last").append(formattedOnlineSchoolYear, formattedOnlineSchoolUrl);        
+        var formattedOnlineSchoolUrl = HTMLonlineURL.replace(/%data%/g, education.onlineCourses[course].url); // replace all %data% occurences by using regEx
+
+        // add a formatted name of the online course and name of the online school to HTML class "education-entry"
+        $(".education-entry:last").append(formattedOnlineSchoolTitle + formattedOnlineSchool + formattedOnlineSchoolYear + formattedOnlineSchoolUrl);       
     }
 };
 
