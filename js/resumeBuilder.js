@@ -15,7 +15,7 @@ console.log(el);
 // create an object, bio, with basic infomations and skills in JSON format
 var bio = {
 	"name" : "Andrea Furikova",
-	"role" : "Junior Web Developer",
+	"role" : "Web Developer",
 	"contacts" : {
 		"email" : "afurikova@yahoo.fr",
 		"mobile" : "+32 478 24 28 66", 
@@ -98,14 +98,18 @@ var education = {
         }
     ],
 
-    "onlineCourses": [
+    "onlineCourses": [{
+            "name": "French",
+            "school" : "Wallangue",
+            "url": "http://www.wallangues.be/",
+            "date" : "present"
+        },
         {
             "name": "Java Script Basics",
             "school" : "Udacity",
             "url": "https://www.udacity.com/",
             "date" : "2014"
         },
-
         {
             "name": "Introduction to the Computer Science",
             "school" : "Udacity",
@@ -118,6 +122,36 @@ var education = {
             "url": "http://itfreetraining.com/",
             "date" : "2013"
         },
+        {
+            "name": "Dutch",
+            "school" : "Wallangue",
+            "url": "http://www.wallangues.be/",
+            "date" : "present"
+        },
+        {
+            "name": "Object-Oriented JavaScript",
+            "school" : "Udacity",
+            "url": "https://www.udacity.com/",
+            "date" : "2015"
+        },
+        {
+            "name": "Initiation au Language PHP",
+            "school" : "Udacity",
+            "url": "http://www.technofuturtic.be/",
+            "date" : "2015"
+        },
+        {
+            "name": "HTML5 Canvas",
+            "school" : "Udacity",
+            "url": "https://www.udacity.com/",
+            "date" : "2015"
+        },
+        {
+            "name": "Web Development",
+            "school" : "Udacity",
+            "url": "https://www.udacity.com/",
+            "date" : "present"
+        }
     ]
 }
 
@@ -171,18 +205,18 @@ education.display();
 var work = {
     "jobs": [
     {
-        "position" : "Content Assistant",
-        "company" : "MLiven s.r.o.",
-        "years" : "9/2007 - 2/2008",
-        "city" : "Prague, Czech Republic",
-        "description" : "Webmastering, responsibility for providing technical support of dating website, answering users' questions and performing content control. Preparation of graphic sources for mobile phone applications. Text correction, updating databases."
+        "position" : "Waitress",
+        "company" : "La Cuve à bière",
+        "years" : "4/2014 - 12/2014",
+        "city" : "Soignies, Belgium",
+        "description" : "Responsibility for the cash register. Taking customers’ orders. Preparing and serving drinks"
     },
     {
         "position" : "Night Auditor",
         "company" : "Andel's Hotel Prague",
         "years" : "7/2012 - 8/2013",
         "city" : "Prague, Czech Republic",
-        "description" : "Ensuring the accuracy of the charges to the guest folios. Giving daily management reports regarding occupancy reports, calculation of daily revenues. Providing client service and performing typical front desk functions such as check-in, check-out, reservations, responding to the guest complaints, etc."
+        "description" : "Ensuring accuracy of the charges to the guest folios. Giving daily management reports regarding occupancy reports, calculation of daily revenues. Providing client service and performing typical front desk functions such as check-in, check-out, reservations, responding to the guest complaints, etc."
     },
     {
         "position" : "Real Estate Agent",
@@ -191,12 +225,12 @@ var work = {
         "city" : "Prague, Czech Republic",
         "description" : "Arranging the selling or renting properties, providing full-service mediation, ensuring marketing and legal service. In addition to the cooperation with premanent clients, I was involved in active searching for and addressing potential clients."
     },
-    {
-        "position" : "Waitress",
-        "company" : "La Cuve à bière",
-        "years" : "4/2014 - 12/2014",
-        "city" : "Soignies, Belgium",
-        "description" : "Responsibility for the cash register. Taking customers’ orders. Preparing and serving drinks"
+        {
+        "position" : "Content Assistant",
+        "company" : "MLiven s.r.o.",
+        "years" : "9/2007 - 2/2008",
+        "city" : "Prague, Czech Republic",
+        "description" : "Webmastering, responsibility for providing technical support of dating website, answering users' questions and performing content control. Preparation of graphic sources for mobile phone applications. Text correction, updating databases."
     }
             ]
 }
