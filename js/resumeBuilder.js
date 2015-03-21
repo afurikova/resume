@@ -70,7 +70,7 @@ bio.display();
 var education = {
     "schools": [
         {
-            "name" : "Metropolitan University Prague o.p.s",
+            "name" : "Metropolitan University Prague",
             "degree" : "Bachelor",
             "major" : "International Relations and European Studies",
             "location" : "Prague, Czech Republic",
@@ -83,14 +83,14 @@ var education = {
             "year" : "2012 "
         },
         {
-            "name" : "Secondary Vocational School, s. r. o., Prague (Czech Republic) ",
+            "name" : "Secondary Vocational School, Prague (Czech Republic) ",
             "degree" : "Leaving School Examination",
             "major" : "Management and Information Technology",
             "location" : "Prague, Czech Republic",
             "year" : "2005 "
         },
         {
-            "name" : "Private Secondary School of Information Technology s.r.o.",
+            "name" : "Private Secondary School of Information Technology",
             "location" : "Prague, Czech Republic",
             "major" : "Information Technology",
             "year" : "2003 ",
@@ -205,30 +205,30 @@ var work = {
     {
         "position" : "Waitress",
         "company" : "La Cuve à bière",
-        "years" : "4/2014 - 12/2014",
+        "years" : "4/2014 - 1/2015",
         "city" : "Soignies, Belgium",
-        "description" : "Responsibility for the cash register. Taking customers’ orders. Preparing and serving drinks"
+        "description" : "Was responsible for cash register. Took customers’ orders. Prepared and served drinks."
     },
     {
         "position" : "Night Auditor",
         "company" : "Andel's Hotel Prague",
         "years" : "7/2012 - 8/2013",
         "city" : "Prague, Czech Republic",
-        "description" : "Ensuring accuracy of the charges to the guest folios. Giving daily management reports regarding occupancy reports, calculation of daily revenues. Providing client service and performing typical front desk functions such as check-in, check-out, reservations, responding to the guest complaints, etc."
+        "description" : "Ensured the accuracy of the charges to the guest folios. Gave daily management reports regarding occupancy reports and calculation of daily revenues. Provided client service and performed typical front desk functions such as check-in, check-out, reservations, responding to the guest complaints, etc."
     },
     {
         "position" : "Real Estate Agent",
-        "company" : "RedHippo Real Estate s.r.o.",
+        "company" : "RedHippo Real Estate",
         "years" : "6/2010 - 5/2011",
         "city" : "Prague, Czech Republic",
-        "description" : "Arranging the selling or renting properties, providing full-service mediation, ensuring marketing and legal service. In addition to the cooperation with premanent clients, I was involved in active searching for and addressing potential clients."
+        "description" : "Actively searched for and addressed potential clients. Assisted clients with property sells and rents. Ensured properties advertising. Coordinated appointments to show homes to prospective buyers and lessees. Negotiated and prepared legal documents and contracts or, in case of need, ensured legal services. Educated clients regarding financial possibilities. Ensured that all the property related documents were properly completed by the clients."
     },
         {
         "position" : "Content Assistant",
-        "company" : "MLiven s.r.o.",
+        "company" : "MLiven",
         "years" : "9/2007 - 2/2008",
         "city" : "Prague, Czech Republic",
-        "description" : "Webmastering, responsibility for providing technical support of dating website, answering users' questions and performing content control. Preparation of graphic sources for mobile phone applications. Text correction, updating databases."
+        "description" : "Prepared of graphic sources and created databases to be used for mobile phone applications. Ensured technical support of dating website. Answered users' questions and performed content control of the website."
     }
             ]
 }
