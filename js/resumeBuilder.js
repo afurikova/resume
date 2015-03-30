@@ -260,6 +260,36 @@ function displayWork(){
 // display working experience in HTML
 displayWork();
 
+var projects = {
+    "work": [
+    {
+        "title" : "Portfolio",
+        "url" : "https://afurikova.github.io/myPortfolio/",
+        "date" : "2015",
+        "description" : "Simple but responsive portfolio created by using Bootstrap",
+        "img" : "http://placehold.it/350x230"
+    }
+  ]
+}
+
+// define a function that displays projecets
+function displayProjects(){
+    for (project in projects.work){
+        $("#projects").append(HTMLprojectStart);
+        
+        // create variables
+        var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.work[project].title);
+        formattedProjectTitle = formattedProjectTitle.replace("%url%", projects.work[project].url);
+        var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.work[project].date);
+        var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.work[project].description);
+        var formattedProjectImg = HTMLprojectImage.replace("%data%", projects.work[project].img);
+        
+        $(".project-entry:last").append(formattedProjectTitle + formattedProjectDates + formattedProjectDescription + formattedProjectImg);
+    }
+}
+
+displayProjects();
+
 // add a button for making the name in an internationalized format
 function inName(){
     var name = $("#name").html();
