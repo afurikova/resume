@@ -22,7 +22,7 @@ body {
 
 #main{
   /*max-width: 1024px;*/
-  max-width: 1024px;
+  max-width: 100%;
 }
 
 .clearfix {
