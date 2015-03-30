@@ -1,18 +1,4 @@
-
-var el      =  $('site')[0];
-console.log(el);
-// var src     =  $(el).css('background-image').slice(4, -1);
-// var img     =  new Image();
-
-// checkHeight =  function(){    
-//     if(img.height < window.innerHeight){
-//        repeatBg();     
-//     }
-// }
-// img.onload  =  checkHeight();
-// img.src = src;
-
-// create an object, bio, with basic infomations and skills in JSON format
+// create an objects bio, education, work and projects with relevant description using JSON 
 var bio = {
 	"name" : "Andrea Furikova",
 	"role" : "Web Developer",
@@ -28,45 +14,6 @@ var bio = {
 	"welcomeMsg" : "<cite>Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree.</cite> Martin Luther. " 
 }
 
-// deffine the display function in bio
-bio.display = function(){
-    var formattedName = HTMLheaderName.replace("%data%", [bio.name]);
-    var formattedRole = HTMLheaderRole.replace("%data%", [bio.role]);
-
-    $("#header").prepend(formattedRole);
-    $("#header").prepend(formattedName);
-
-
-    // display contacts
-    var formattedMobile = HTMLmobile.replace("%data%", [bio.contacts.mobile]);
-    var formattedEmail = HTMLemail.replace("%data%", [bio.contacts.email]);
-    var formattedLocation = HTMLlocation.replace("%data%", [bio.contacts.location]);
-    var formattedGithub = HTMLgithub.replace("%data%", [bio.contacts.github]);
-
-    $("#topContacts").append(formattedMobile, formattedEmail, formattedLocation, formattedGithub);
-    $("#footerContacts").append(formattedMobile, formattedEmail, formattedLocation, formattedGithub);
-
-    // display picture
-    var formattedPic = HTMLbioPic.replace("%data%",bio.bioPic);
-    $("#header").append(formattedPic);
-
-    // display Welcome msg
-    var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%",bio.welcomeMsg);
-    $("#header").append(formattedWelcomeMsg);
-
-
-    // adds skills to the header 
-    $("#header").append(HTMLskillsStart)
-    for (skill in bio.computerSkills){
-        var formattedSkills = HTMLskills.replace("%data%", bio.computerSkills[skill]);
-        $("#skills").append(formattedSkills)
-    }
-
-}
-// call for display function in bio
-bio.display();
-
-// create an object "education" containing visite schools and courses in JSON format
 var education = {
     "schools": [
         {
@@ -155,7 +102,92 @@ var education = {
     ]
 }
 
-// define a display method for the object "education"
+var work = {
+    "jobs": [
+    {
+        "position" : "Waitress",
+        "company" : "La Cuve à bière",
+        "years" : "4/2014 - 1/2015",
+        "city" : "Soignies, Belgium",
+        "description" : "Was responsible for cash register. Took customers’ orders. Prepared and served drinks."
+    },
+    {
+        "position" : "Night Auditor",
+        "company" : "Andel's Hotel Prague",
+        "years" : "7/2012 - 8/2013",
+        "city" : "Prague, Czech Republic",
+        "description" : "Ensured the accuracy of the charges to the guest folios. Gave daily management reports regarding occupancy reports and calculation of daily revenues. Provided client service and performed typical front desk functions such as check-in, check-out, reservations, responding to the guest complaints, etc."
+    },
+    {
+        "position" : "Real Estate Agent",
+        "company" : "RedHippo Real Estate",
+        "years" : "6/2010 - 5/2011",
+        "city" : "Prague, Czech Republic",
+        "description" : "Actively searched for and addressed potential clients. Assisted clients with property sells and rents. Ensured properties advertising. Coordinated appointments to show homes to prospective buyers and lessees. Negotiated and prepared legal documents and contracts or, in case of need, ensured legal services. Educated clients regarding financial possibilities. Ensured that all the property related documents were properly completed by the clients."
+    },
+        {
+        "position" : "Content Assistant",
+        "company" : "MLiven",
+        "years" : "9/2007 - 2/2008",
+        "city" : "Prague, Czech Republic",
+        "description" : "Prepared of graphic sources and created databases to be used for mobile phone applications. Ensured technical support of dating website. Answered users' questions and performed content control of the website."
+    }
+            ]
+}
+
+var projects = {
+    "work": [
+    {
+        "title" : "Portfolio",
+        "url" : "https://afurikova.github.io/myPortfolio/",
+        "date" : "2015",
+        "description" : "Simple but responsive portfolio created by using Bootstrap",
+        "img" : "http://placehold.it/350x230"
+    }
+  ]
+}
+
+// define function that will display the given information from bio object
+bio.display = function(){
+    var formattedName = HTMLheaderName.replace("%data%", [bio.name]);
+    var formattedRole = HTMLheaderRole.replace("%data%", [bio.role]);
+
+    $("#header").prepend(formattedRole);
+    $("#header").prepend(formattedName);
+
+
+    // display contacts
+    var formattedMobile = HTMLmobile.replace("%data%", [bio.contacts.mobile]);
+    var formattedEmail = HTMLemail.replace("%data%", [bio.contacts.email]);
+    var formattedLocation = HTMLlocation.replace("%data%", [bio.contacts.location]);
+    var formattedGithub = HTMLgithub.replace("%data%", [bio.contacts.github]);
+
+    $("#topContacts").append(formattedMobile, formattedEmail, formattedLocation, formattedGithub);
+    $("#footerContacts").append(formattedMobile, formattedEmail, formattedLocation, formattedGithub);
+
+    // display picture
+    var formattedPic = HTMLbioPic.replace("%data%",bio.bioPic);
+    $("#header").append(formattedPic);
+
+    // display Welcome msg
+    var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%",bio.welcomeMsg);
+    $("#header").append(formattedWelcomeMsg);
+
+
+    // adds skills to the header 
+    $("#header").append(HTMLskillsStart)
+    for (skill in bio.computerSkills){
+        var formattedSkills = HTMLskills.replace("%data%", bio.computerSkills[skill]);
+        $("#skills").append(formattedSkills)
+    }
+
+}
+// call for display function in bio
+bio.display();
+
+
+
+// define function that will display the given information from education object
 education.display = function(){
     
     // add information about schools
@@ -199,42 +231,9 @@ education.display = function(){
 // display education
 education.display();
 
-// create an object work in JSON 
-var work = {
-    "jobs": [
-    {
-        "position" : "Waitress",
-        "company" : "La Cuve à bière",
-        "years" : "4/2014 - 1/2015",
-        "city" : "Soignies, Belgium",
-        "description" : "Was responsible for cash register. Took customers’ orders. Prepared and served drinks."
-    },
-    {
-        "position" : "Night Auditor",
-        "company" : "Andel's Hotel Prague",
-        "years" : "7/2012 - 8/2013",
-        "city" : "Prague, Czech Republic",
-        "description" : "Ensured the accuracy of the charges to the guest folios. Gave daily management reports regarding occupancy reports and calculation of daily revenues. Provided client service and performed typical front desk functions such as check-in, check-out, reservations, responding to the guest complaints, etc."
-    },
-    {
-        "position" : "Real Estate Agent",
-        "company" : "RedHippo Real Estate",
-        "years" : "6/2010 - 5/2011",
-        "city" : "Prague, Czech Republic",
-        "description" : "Actively searched for and addressed potential clients. Assisted clients with property sells and rents. Ensured properties advertising. Coordinated appointments to show homes to prospective buyers and lessees. Negotiated and prepared legal documents and contracts or, in case of need, ensured legal services. Educated clients regarding financial possibilities. Ensured that all the property related documents were properly completed by the clients."
-    },
-        {
-        "position" : "Content Assistant",
-        "company" : "MLiven",
-        "years" : "9/2007 - 2/2008",
-        "city" : "Prague, Czech Republic",
-        "description" : "Prepared of graphic sources and created databases to be used for mobile phone applications. Ensured technical support of dating website. Answered users' questions and performed content control of the website."
-    }
-            ]
-}
 
 
-// define a display method for the ojbect "work"
+// define function that will display the given information from work object
 function displayWork(){
     for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
@@ -257,22 +256,11 @@ function displayWork(){
     }
 }
 
-// display working experience in HTML
+// display work
 displayWork();
 
-var projects = {
-    "work": [
-    {
-        "title" : "Portfolio",
-        "url" : "https://afurikova.github.io/myPortfolio/",
-        "date" : "2015",
-        "description" : "Simple but responsive portfolio created by using Bootstrap",
-        "img" : "http://placehold.it/350x230"
-    }
-  ]
-}
 
-// define a function that displays projecets
+// define function that will display the given information from projects object
 function displayProjects(){
     for (project in projects.work){
         $("#projects").append(HTMLprojectStart);
@@ -288,9 +276,10 @@ function displayProjects(){
     }
 }
 
+// display projects
 displayProjects();
 
-// add a button for making the name in an internationalized format
+// define function to create internationalized format of the name
 function inName(){
     var name = $("#name").html();
     name = name.trim().split(" ");
