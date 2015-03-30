@@ -109,10 +109,11 @@ function initializeMap() {
     //disableDefaultUI: true
   };
 
+
   // This next line makes `map` a new Google Map JavaScript Object and attaches it to
   // <div id="map">, which is appended as part of an exercise late in the course.
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
- 
+  console.log(map);
 
   /*
   locationFinder() returns an array of every location string from the JSONs
@@ -237,7 +238,7 @@ window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-window.addEventListener('resize', function(e) {
-  // Make sure the map bounds get updated on page resize
-  map.fitBounds(mapBounds);
-});
+// window.addEventListener('resize', function(e) {
+//   // Make sure the map bounds get updated on page resize
+//   map.fitBounds(mapBounds);
+// });
