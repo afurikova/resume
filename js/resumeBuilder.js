@@ -139,11 +139,18 @@ var projects = {
     "work": [
     {
         "title" : "Portfolio",
-        "url" : "https://afurikova.github.io/myPortfolio/",
+        "url" : "http://adica.me.cz/portfolio/",
         "date" : "2015",
-        "description" : "Simple but responsive portfolio created by using Bootstrap",
-        "img" : "http://placehold.it/350x230"
-    }
+        "description" : "Responsive portfolio website built by using Bootstrap.",
+        "img" : "images/portfolio.jpg"
+    },
+    {
+        "title" : "Frogger",
+        "url" : "http://adica.me.cz/frogger/",
+        "date" : "2015",
+        "description" : "Canvas game I created was a final project of Udacity OOP JavaScript course.",
+        "img" : "images/frogger.jpg"
+    },
   ]
 }
 
