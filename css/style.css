@@ -189,13 +189,13 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
+  padding: 1%;
   width: 200px;
   display: none;
 }
 
 img {
-  padding: 10px;
+  padding: 1%;
 }
 
 /* Bar chart stuff */
