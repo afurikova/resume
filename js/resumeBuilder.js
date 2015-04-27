@@ -175,7 +175,7 @@ bio.display = function(){
     var formattedLocation = HTMLlocation.replace("%data%", [bio.contacts.location]);
     var formattedGithub = HTMLgithub.replace("%data%", [bio.contacts.github]);
 
-    $("#topContacts").append(formattedMobile, formattedEmail, formattedLocation, formattedGithub);
+    //$("#topContacts").append(formattedMobile, formattedEmail, formattedLocation, formattedGithub);
     $("#footerContacts").append(formattedMobile, formattedEmail, formattedLocation, formattedGithub);
 
     // display picture
