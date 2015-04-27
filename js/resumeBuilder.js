@@ -108,28 +108,28 @@ var work = {
         "position" : "Waitress",
         "company" : "La Cuve à bière",
         "years" : "4/2014 - 1/2015",
-        "city" : "Soignies, Belgium",
+        "location" : "Soignies, Belgium",
         "description" : "Was responsible for cash register. Took customers’ orders. Prepared and served drinks."
     },
     {
         "position" : "Night Auditor",
         "company" : "Andel's Hotel Prague",
         "years" : "7/2012 - 8/2013",
-        "city" : "Prague, Czech Republic",
+        "location" : "Prague, Czech Republic",
         "description" : "Ensured the accuracy of the charges to the guest folios. Gave daily management reports regarding occupancy reports and calculation of daily revenues. Provided client service and performed typical front desk functions such as check-in, check-out, reservations, responding to the guest complaints, etc."
     },
     {
         "position" : "Real Estate Agent",
         "company" : "RedHippo Real Estate",
         "years" : "6/2010 - 5/2011",
-        "city" : "Prague, Czech Republic",
+        "location" : "Prague, Czech Republic",
         "description" : "Actively searched for and addressed potential clients. Assisted clients with property sells and rents. Ensured properties advertising. Coordinated appointments to show homes to prospective buyers and lessees. Negotiated and prepared legal documents and contracts or, in case of need, ensured legal services. Educated clients regarding financial possibilities. Ensured that all the property related documents were properly completed by the clients."
     },
         {
         "position" : "Content Assistant",
         "company" : "MLiven",
         "years" : "9/2007 - 2/2008",
-        "city" : "Prague, Czech Republic",
+        "location" : "Prague, Czech Republic",
         "description" : "Prepared of graphic sources and created databases to be used for mobile phone applications. Ensured technical support of dating website. Answered users' questions and performed content control of the website."
     }
             ]
