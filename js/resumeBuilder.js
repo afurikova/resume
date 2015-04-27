@@ -94,6 +94,12 @@ var education = {
             "date" : "2015"
         },
         {
+            "name": "JavaScript Design Patterns ",
+            "school" : "Udacity",
+            "url": "https://www.udacity.com/",
+            "date" : "2015"
+        },
+        {
             "name": "Web Development",
             "school" : "Udacity",
             "url": "https://www.udacity.com/",
@@ -145,10 +151,17 @@ var projects = {
         "img" : "images/portfolio.jpg"
     },
     {
+        "title" : "Resume",
+        "url" : "http://adica.me.cz/resume/",
+        "date" : "2015",
+        "description" : "This interactive résumé is the final project of JavaScript Basics course.",
+        "img" : "images/resume.jpg"
+    },
+    {
         "title" : "Frogger",
         "url" : "http://adica.me.cz/frogger/",
         "date" : "2015",
-        "description" : "Canvas game I created was a final project of Udacity OOP JavaScript course.",
+        "description" : "My version of frogger-like canvas game I created was a final project of OOP JavaScript course.",
         "img" : "images/frogger.jpg"
     },
   ]
