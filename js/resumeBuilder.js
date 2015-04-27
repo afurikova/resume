@@ -154,6 +154,12 @@ var projects = {
   ]
 }
 
+var locationsDescription = {
+            "Praha" : "This is the place where I was born and spent most of my life, the Hundred-spired Prague where beer is cheaper than water and all the girls are pretty :)",
+            "Århus" : "Here I spent 5 wonderful months as an Erasmus student. Aarhus is definitely one of my favourite places!",
+            "Soignies" : "My current home, finally I have managed to speak and understand some French and now I am struggling with Dutch..."
+        }
+
 // define function that will display the given information from bio object
 bio.display = function(){
     var formattedName = HTMLheaderName.replace("%data%", [bio.name]);
