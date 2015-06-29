@@ -9,7 +9,7 @@ var bio = {
 		"location" : "Soignies (Belgium)"
 		},
 	"age" : 30,	
-	"computerSkills" : ["HTML", " CSS", "Python","JavaScript","jQuery","Git","Windows", "Active Directory","Adobe Photoshop","Adobe InDesign","Adobe Illustrator","Amadeus","Analytic and Logical Thinking","Customer Service", "Communication","Czech", " Slovak", "English","French","Krav Maga","Cooking"],
+	"computerSkills" : ["HTML 5", "CSS", "JavaScript", "jQuery", "Python", "AJAX", "Knockout js", "Git", "OOP", "Adobe Photoshop","Adobe InDesign","Adobe Illustrator", "Windows", "Active Directory", "Amadeus", "Analytic and Logical Thinking", "Customer Service", "Communication", "Czech", "Slovak", "English", "French", "Krav Maga", "Cooking"],
     "bioPic" : "images/pic1.jpg",
 	"welcomeMsg" : "<cite>Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree.</cite> Martin Luther. " 
 }
@@ -164,6 +164,13 @@ var projects = {
         "description" : "My version of frogger-like canvas game I created was a final project of OOP JavaScript course.",
         "img" : "images/frogger.jpg"
     },
+    {
+        "title" : "Neighborhood app",
+        "url" : "http://adica.me.cz/neighborhood/",
+        "date" : "2015",
+        "description" : "A single page web application. It shows my favourite places of chosen location . In this project I use framework Knockout js and in order to get some additional information about the places I retrieve data through the Google Maps API and its relevant services.",
+        "img" : "images/neighborhood.jpg"
+    }
   ]
 }
 
