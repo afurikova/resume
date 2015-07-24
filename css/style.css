@@ -166,16 +166,6 @@ a {
 #header {
   background-color: rgba(34, 139, 0, 0.5);
 }
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
 .center-content {
   padding-top: 2.5%;
   padding-left: 5%;
@@ -183,8 +173,17 @@ a {
   padding-bottom: 2.5%
 }
 
-ul {
+#role {
+  white-space: nowrap;
+}
+#header ul {
   list-style-type: none;
+  text-align: center;
+  padding: 10px;
+}
+
+#header li {
+  display: inline-block;
 }
 
 .biopic {
