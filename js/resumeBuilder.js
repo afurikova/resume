@@ -211,6 +211,7 @@ bio.display = function(){
     $("#header").append(HTMLskillsStart)
     for (skill in bio.computerSkills){
         var formattedSkills = HTMLskills.replace("%data%", bio.computerSkills[skill]);
+        console.log(formattedSkills)
         $("#skills").append(formattedSkills)
     }
 
