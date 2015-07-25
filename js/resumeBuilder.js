@@ -9,7 +9,7 @@ var bio = {
 		"location" : "Soignies (Belgium)"
 		},
 	"age" : 30,	
-	"computerSkills" : ["HTML 5", "CSS", "JavaScript", "jQuery", "Python", "AJAX", "Knockout js", "Git", "OOP", "Adobe Photoshop","Adobe InDesign","Adobe Illustrator", "Windows", "Active Directory", "Amadeus", "Analytic and Logical Thinking", "Customer Service", "Communication", "Czech", "Slovak", "English", "French", "Krav Maga", "Cooking"],
+	"computerSkills" : ["HTML 5", "CSS", "JavaScript", "jQuery", "Python", "AJAX", "Knockout JS", "Git", "OOP", "Responsive Design", "Adobe Photoshop","Adobe InDesign","Adobe Illustrator", "Windows", "Active Directory", "Amadeus", "Analytic and Logical Thinking", "Customer Service", "Communication", "Czech", "Slovak", "English", "French", "Krav Maga", "Cooking"],
     "bioPic" : "images/pic1.jpg",
 	"welcomeMsg" : "<cite>Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree.</cite> Martin Luther. " 
 }
@@ -148,28 +148,28 @@ var projects = {
         "url" : "http://adica.me.cz/portfolio/",
         "date" : "2015",
         "description" : "Responsive portfolio website built by using Bootstrap.",
-        "img" : "images/portfolio.jpg"
+        "img" : ["images/portfolio.jpg", "images/portfolio2.jpg"]
     },
     {
         "title" : "Resume",
         "url" : "http://adica.me.cz/resume/",
         "date" : "2015",
         "description" : "This interactive résumé is the final project of JavaScript Basics course.",
-        "img" : "images/resume.jpg"
+        "img" : ["images/resume.jpg"]
     },
     {
         "title" : "Frogger",
         "url" : "http://adica.me.cz/frogger/",
         "date" : "2015",
         "description" : "My version of frogger-like canvas game I created was a final project of OOP JavaScript course.",
-        "img" : "images/frogger.jpg"
+        "img" : ["images/frogger.jpg", "images/frogger2.jpg"]
     },
     {
         "title" : "Neighborhood app",
         "url" : "http://adica.me.cz/neighborhood/",
         "date" : "2015",
         "description" : "A single page web application. It shows my favourite places of chosen location . In this project I use framework Knockout js and in order to get some additional information about the places I retrieve data through the Google Maps API and its relevant services.",
-        "img" : "images/neighborhood.jpg"
+        "img" : ["images/neighborhood.jpg"]
     }
   ]
 }
@@ -297,13 +297,26 @@ displayWork();
 function displayProjects(){
     for (project in projects.work){
         $("#projects").append(HTMLprojectStart);
-        
+        var images = projects.work[project].img;
+
         // create variables
         var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.work[project].title);
         formattedProjectTitle = formattedProjectTitle.replace("%url%", projects.work[project].url);
         var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.work[project].date);
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.work[project].description);
-        var formattedProjectImg = HTMLprojectImage.replace("%data%", projects.work[project].img);
+        var formattedProjectImg = "";
+         // = HTMLprojectImage;
+
+
+        // console.log(projects.work[project].img[0])
+        // console.log(i)
+
+        for (i = 0; i < images.length; i++){
+            formattedProjectImg += HTMLprojectImage.replace("%data%", images[i]);
+            console.log(formattedProjectImg)
+        }
+        // console.log(projects.work[project].img[0])
+        // formattedProjectImg.replace("%data%", projects.work[project].img);
         
         $(".project-entry:last").append(formattedProjectTitle + formattedProjectDates + formattedProjectDescription + formattedProjectImg);
     }
