@@ -12,16 +12,12 @@ body {
 }
 
 #site{
-  background-image: url(../images/back1.jpg);
-  background-color: black;
-  /*  background-repeat: no-repeat;
-  background-attachment: fixed;*/
+  background-color: rgb(84, 215, 51);
   max-width: 1920px;
-  margin: 25px;
+  margin: auto;
 }
 
 #main{
-  /*max-width: 1024px;*/
   max-width: 100%;
 }
 
@@ -176,13 +172,13 @@ a {
 #role {
   white-space: nowrap;
 }
-#header ul {
+ul {
   list-style-type: none;
   text-align: center;
   padding: 10px;
 }
 
-#header li {
+li {
   display: inline-block;
 }
 
@@ -215,6 +211,34 @@ span {
 
 #letsConnect {
   text-align: center;
+}
+
+/* This button was generated using CSSButtonGenerator.com and customize by Andrea :)*/
+.btn {
+  /*-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;*/
+  /*box-shadow:inset 0px 1px 0px 0px #fce2c1;*/
+  background-color:#F5AE23;
+  border:1px solid #eeb44f;
+  color:#ffffff;
+  font-size:16px;
+  font-weight:bold;
+  height:50px;
+  line-height:50px;
+  width:126px;
+  text-align:center;
+  text-shadow:1px 1px 0px #cc9f52;
+}
+
+.btn:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5af23), color-stop(1, #ffc477) );
+  background:-moz-linear-gradient( center top, #f5af23 5%, #ffc477 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5af23', endColorstr='#ffc477');
+  background-color:#f5af23;
+
+}.btn:active {
+  position:relative;
+  top:1px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -255,5 +279,26 @@ span {
   #skillsH3,
   .biopic {
     display: block;
+  }
+
+  
+  /**, p{
+    font-size: 22px;   
+  }*/
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+
+  p, #role, .welcome-message, .date-text, .location-text, ul, a, .url {
+    font-size: 20px;
   }
 }
