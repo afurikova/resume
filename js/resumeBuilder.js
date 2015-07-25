@@ -54,13 +54,19 @@ var education = {
         {
             "name": "Java Script Basics",
             "school" : "Udacity",
-            "url": "https://www.udacity.com/",
+            "url": "https://www.udacity.com/course/javascript-basics--ud804",
             "date" : "2014"
+        },
+        {
+            "name": "Intro to jQuery",
+            "school" : "Udacity",
+            "url": "https://www.udacity.com/course/intro-to-jquery--ud245",
+            "date" : "2015"
         },
         {
             "name": "Introduction to the Computer Science",
             "school" : "Udacity",
-            "url": "https://www.udacity.com/",
+            "url": "https://www.udacity.com/course/intro-to-computer-science--cs101",
             "date" : "2014"
         },
         {
@@ -68,6 +74,12 @@ var education = {
             "school" : "IT Free Training",
             "url": "http://itfreetraining.com/",
             "date" : "2013"
+        },
+        {
+            "name": "Programming Foundations with Python ",
+            "school" : "Udacity",
+            "url": "https://www.udacity.com/course/programming-foundations-with-python--ud036",
+            "date" : "2014"
         },
         {
             "name": "Dutch",
@@ -78,7 +90,7 @@ var education = {
         {
             "name": "Object-Oriented JavaScript",
             "school" : "Udacity",
-            "url": "https://www.udacity.com/",
+            "url": "https://www.udacity.com/course/object-oriented-javascript--ud015",
             "date" : "2015"
         },
         {
@@ -90,20 +102,38 @@ var education = {
         {
             "name": "HTML5 Canvas",
             "school" : "Udacity",
-            "url": "https://www.udacity.com/",
+            "url": "https://www.udacity.com/course/html5-canvas--ud292",
             "date" : "2015"
         },
         {
             "name": "JavaScript Design Patterns ",
             "school" : "Udacity",
-            "url": "https://www.udacity.com/",
+            "url": "https://www.udacity.com/course/javascript-design-patterns--ud989",
+            "date" : "2015"
+        },
+        {
+            "name": "Intro to AJAX",
+            "school" : "Udacity",
+            "url": "https://www.udacity.com/course/intro-to-ajax--ud110",
             "date" : "2015"
         },
         {
             "name": "Web Development",
             "school" : "Udacity",
-            "url": "https://www.udacity.com/",
+            "url": "https://www.udacity.com/course/web-development--cs253",
             "date" : "present"
+        },
+        {
+            "name": "Responsive Web Design Fundamentals",
+            "school" : "Udacity",
+            "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893",
+            "date" : "2015"
+        },
+        {
+            "name": "Responsive images",
+            "school" : "Udacity",
+            "url": "https://www.udacity.com/course/responsive-images--ud882",
+            "date" : "2015"
         }
     ]
 }
@@ -147,14 +177,14 @@ var projects = {
         "title" : "Portfolio",
         "url" : "http://adica.me.cz/portfolio/",
         "date" : "2015",
-        "description" : "Responsive portfolio website built by using Bootstrap.",
+        "description" : "Fully responsive portfolio built in Bootstrap. The text and the logo resize responsively but their maximal size is limited according to the screen resolution. The images are optimized and available in different sizes and formats so the most suitable image can be loaded depending on the screen’s parameters. This improves the user’s experience by decreasing loading time of the website. The code is available on my GitHub pages.",
         "img" : ["images/portfolio.jpg", "images/portfolio2.jpg"]
     },
     {
         "title" : "Resume",
         "url" : "http://adica.me.cz/resume/",
         "date" : "2015",
-        "description" : "This interactive résumé is the final project of JavaScript Basics course.",
+        "description" : "My responsive online resume was the final project of the Basics of JavaScript course. I wrote the JavaScript/jQuery code which turns the given data stored in JSON into HTML.  I also adjust the CSS style and improve the responsivity. All the graphics and the images are optimized so the site is loading fast. The entire code is to find on my GitHub pages.",
         "img" : ["images/resume.jpg"]
     },
     {
@@ -305,18 +335,10 @@ function displayProjects(){
         var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.work[project].date);
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.work[project].description);
         var formattedProjectImg = "";
-         // = HTMLprojectImage;
-
-
-        // console.log(projects.work[project].img[0])
-        // console.log(i)
 
         for (i = 0; i < images.length; i++){
             formattedProjectImg += HTMLprojectImage.replace("%data%", images[i]);
-            console.log(formattedProjectImg)
         }
-        // console.log(projects.work[project].img[0])
-        // formattedProjectImg.replace("%data%", projects.work[project].img);
         
         $(".project-entry:last").append(formattedProjectTitle + formattedProjectDates + formattedProjectDescription + formattedProjectImg);
     }
