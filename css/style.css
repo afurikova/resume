@@ -10,10 +10,6 @@ body {
    /*outline: 1px solid red !important;*/
   font-family: 'Ubuntu', sans-serif;
 }
-a {
-  padding-top: 0.5em;
-  padding-bottom: 0.9em;
-}
 
 #site{
   background-color: rgb(84, 215, 51);
@@ -30,7 +26,7 @@ a {
 }
 
 #education {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .education-entry, .work-entry, .project-entry {
@@ -64,7 +60,9 @@ a {
     color: #999999;
     line-height: 16px;
     float: right;
-    margin-top: 0;
+    margin: 0;
+    padding: 1em 0;
+    max-width: 100%;
 }
 
 h1 {
@@ -109,6 +107,7 @@ h2, h3, h4, h5 {
   color: #999999;
   line-height: 16px;
   float: left;
+  /*padding: 0.3em 0 0 0;*/
 }
 
 .location-text {
@@ -124,12 +123,17 @@ p {
   font-size: 14px;
   color: #333333;
   line-height: 21px;
+  clear: both;
+}
+
+em {
+  clear: both;
 }
 
 a {
   color: #1199C3;
   text-decoration: none;
-  margin-top: 10px;
+  padding: 0.3em 0;
   display: block;
 }
 
@@ -289,11 +293,6 @@ span {
   .biopic {
     display: block;
   }
-
-  
-  /**, p{
-    font-size: 22px;   
-  }*/
 }
 
 @media screen and (min-width: 1200px) {
@@ -307,7 +306,15 @@ span {
     font-size: 24px;
   }
 
-  p, #role, .welcome-message, .date-text, .location-text, ul, a, .url {
+  p, ul, a, em, #role, .welcome-message, .date-text, .location-text, .url {
     font-size: 20px;
   }
 }
+
+/*@media screen and (max-width: 500px) {
+  .link {
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.8em;
+  }
+}*/
