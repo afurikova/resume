@@ -254,9 +254,9 @@ bio.display();
 education.display = function(){
     
     // add information about schools
-    $("#education").append(HTMLschoolStart); 
+    
     for (school in education.schools){    
-           
+        $("#education").append(HTMLschoolStart); 
         var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
         var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
         
@@ -277,10 +277,13 @@ education.display = function(){
 
     
     $("#education").append(HTMLonlineClasses);
-    $("#education").append(HTMLschoolStart);
+    
     
     for (course in education.onlineCourses){
+        $("#education").append(HTMLschoolStart);
+        console.log($("#education"))
         var formattedOnlineSchoolTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].name);
+        
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
         var formattedOnlineSchoolYear = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
         var formattedOnlineSchoolUrl = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
